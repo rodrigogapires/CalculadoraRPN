@@ -44,6 +44,13 @@ public class Pilha {
         return valor;
     }
 
+    public double top() {
+        if (!empty()) {
+            return atual.getValor();
+        }
+        throw new IllegalStateException("Pilha vazia");
+    }
+
     public boolean empty() {
         return size == 0;
     }
